@@ -9,7 +9,10 @@
     <keywords></keywords>
     <repo>https://github.com/davgc/cordova-plugin-moverioBT350.git</repo>
     
-
+  <engines>
+    <engine name="cordova" version=">=6.4.0" />
+    <engine name="cordova-android" version=">=5.1.0" />
+  </engines>
     <!-- android -->
     <platform name="android">
       <js-module src="www/plugin.js" name="plugin">
@@ -27,8 +30,8 @@
 
       <source-file src="src/android/com/funcionasi/moverioBT350.java" target-dir="src/com/funcionasi/" />
 
-       <!-- <preference name="PLAY_SERVICES_VERSION" default="1.0" />
-       <framework src="com.epson.moverio.btcontrol.Bt3sCameraLedMode:$PLAY_SERVICES_VERSION" /> -->
+      <lib-file src="src/android/libs/BT350Ctrl.jar"/>
+
     </platform>
 
 </plugin>
