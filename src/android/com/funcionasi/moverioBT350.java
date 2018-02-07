@@ -16,6 +16,8 @@ import android.util.Log;
 
 import java.util.Date;
 
+import com.epson.moverio.btcontrol.Bt3sCameraLedMode;
+
 public class moverioBT350 extends CordovaPlugin {
   private static final String TAG = "moverioBT350";
 
@@ -26,11 +28,11 @@ public class moverioBT350 extends CordovaPlugin {
   }
 
   public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-    if(action.equals("saludar")) {
-      // An example of returning data back to the web layer
-       String phrase = args.getString(0);
-      // Echo back the first argument      
-      final PluginResult result = new PluginResult(PluginResult.Status.OK, "Hola!! ::"+phrase);
+    if(action.equals("setCameraLedMode")) {
+      Integer mode = args.getInt(0);
+      Bt3sCameraLedMode bt3sCameraLedMode = new Bt3sCameraLedMode(this.cordova.getActivity());
+      bt3sCameraLedMode.setCameraLedMode(mode);
+      final PluginResult result = new PluginResult(PluginResult.Status.OK, bt3sCameraLedMode.getCameraLedMode());
       callbackContext.sendPluginResult(result);
     }
     return true;
