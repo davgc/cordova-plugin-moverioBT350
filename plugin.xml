@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-moverioBT350"
+    version="0.0.1">
+    <name>Cordova Plugin Moverio BT350</name>
+    <description></description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo>https://github.com/davgc/cordova-plugin-moverioBT350.git</repo>
+    
+
+    <!-- android -->
+    <platform name="android">
+      <js-module src="www/plugin.js" name="plugin">
+        <runs/>
+
+        <!-- Este es el nombre por el cual se accedera el plugin -->
+        <clobbers target="moverioBT350" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="moverioBT350">
+          <param name="android-package" value="com.funcionasi.moverioBT350" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+
+      <source-file src="src/android/com/funcionasi/moverioBT350.java" target-dir="src/com/funcionasi/" />
+
+       <!-- <preference name="PLAY_SERVICES_VERSION" default="1.0" />
+       <framework src="com.epson.moverio.btcontrol.Bt3sCameraLedMode:$PLAY_SERVICES_VERSION" /> -->
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/plugin.js" name="plugin">
+            <runs/>
+            <clobbers target="moverioBT350" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="moverioBT350">
+                <param name="ios-package" value="moverioBT350" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/moverioBT350.h" />
+        <source-file src="src/ios/moverioBT350.m" />
+    </platform>
+</plugin>
