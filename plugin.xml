@@ -31,19 +31,4 @@
        <framework src="com.epson.moverio.btcontrol.Bt3sCameraLedMode:$PLAY_SERVICES_VERSION" /> -->
     </platform>
 
-    <!-- ios -->
-    <platform name="ios">
-        <js-module src="www/plugin.js" name="plugin">
-            <runs/>
-            <clobbers target="moverioBT350" />
-        </js-module>
-        <config-file target="config.xml" parent="/*">
-            <feature name="moverioBT350">
-                <param name="ios-package" value="moverioBT350" onload="true" />
-            </feature>
-        </config-file>
-
-        <header-file src="src/ios/moverioBT350.h" />
-        <source-file src="src/ios/moverioBT350.m" />
-    </platform>
 </plugin>

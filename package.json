@@ -1,0 +1,27 @@
+{
+  "name": "moverio-bt-350",
+  "version": "0.0.1",
+  "description": "Moverio BT 350 cordova plugin",
+  "cordova": {
+    "id": "com.funcionasi.moverioBT350",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davgc/cordova-plugin-moverioBT350.git"
+  },
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "moverio"
+  ],
+  "author": "Funciona",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davgc/cordova-plugin-moverioBT350/issues"
+  },
+  "homepage": "https://github.com/davgc/cordova-plugin-moverioBT350#readme"
+}
