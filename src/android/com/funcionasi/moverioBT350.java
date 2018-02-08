@@ -79,7 +79,11 @@ public class moverioBT350 extends CordovaPlugin {
       Bt3sCameraLedMode bt3sCameraLedMode = new Bt3sCameraLedMode(this.cordova.getActivity());
       bt3sCameraLedMode.setCameraLedMode(mode);
 
+      //final PluginResult result = new PluginResult(PluginResult.Status.OK, bt3sCameraLedMode.getCameraLedMode());
+      //callbackContext.sendPluginResult(result);
+
       String result = "{'led_mode':" +bt3sCameraLedMode.getCameraLedMode()+"}";
+
       callbackSuccess(callbackContext, new JSONObject(result));
 
     }
