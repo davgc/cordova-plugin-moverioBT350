@@ -29,7 +29,4 @@ var moverioBT350 = {
 };
 
 
-
-
-
 module.exports = moverioBT350;
