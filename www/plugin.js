@@ -24,7 +24,17 @@ var moverioBT350 = {
   },
   setTrackpadEnable: function (enable, successCallback, errorCallback) {
     exec(successCallback, errorCallback, PLUGIN_NAME, "setTrackpadEnable", [enable]);
+  },
+  keyResetToDefault: function (enable, successCallback, errorCallback) {
+    exec(successCallback, errorCallback, PLUGIN_NAME, "resetToDefault", [enable]);
+  },
+  setESpadSensitivity: function (enable, successCallback, errorCallback) {
+    exec(successCallback, errorCallback, PLUGIN_NAME, "setESpadSensitivity", [enable]);
+  },
+  setControllerLedMode: function (enable, successCallback, errorCallback) {
+    exec(successCallback, errorCallback, PLUGIN_NAME, "setControllerLedMode", [enable]);
   }
+
 
 };
 
