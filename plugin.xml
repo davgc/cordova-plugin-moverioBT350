@@ -31,7 +31,6 @@
       <source-file src="src/android/com/funcionasi/moverioBT350.java" target-dir="src/com/funcionasi/" />
 
       <lib-file src="src/android/libs/BT350Ctrl.jar"/>
-      <framework src="com.android.support:support-v4:+" />
 
     </platform>
 
